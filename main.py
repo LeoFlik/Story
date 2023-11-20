@@ -60,7 +60,10 @@ gravatar = Gravatar(
 )
 
 # CONNECT TO DB
-app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URI")
+# app.config["SQLALCHEMY_DATABASE_URI"] =
+app.config[
+    "SQLALCHEMY_DATABASE_URI"
+] = "postgresql://default:8kra2ZindwpJ@ep-shy-cake-84016511.us-east-1.postgres.vercel-storage.com:5432/verceldb"
 db = SQLAlchemy()
 db.init_app(app)
 
